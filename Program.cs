@@ -94,4 +94,64 @@ int[] array = new int[length];
 FillArrayRandomNumbers(array);
 int count = SearchNumbers(array, leftside, rightside);
 PrintArray(array);
-Console.Write($"Number to {leftside} from {rightside} = {count}");
+Console.Write($"Numbers to {leftside} from {rightside} = {count}");
+
+/*Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+[1 2 3 4 5] -> 5 8 3
+[6 7 3 6] -> 36 21*/
+
+/*void PrintArray(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+
+int SearchNumbers(int[] array, int leftside, int rightside)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(leftside <= array[i]  &  array[i] <= rightside)
+            {
+                count++;
+            }
+    }
+    return count;
+}
+
+void FillArrayRandomNumbers(int[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        array[i] = new Random().Next(0, 10);
+    }
+}
+
+
+
+Console.Write("Input length array: ");
+int length = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[length];
+int[] multiplication = new int[length];
+FillArrayRandomNumbers(array);
+PrintArray(array);
+
+for(int i=0; i<=length/2; i++)
+{   
+    if (i != length-1-i)
+    {
+        multiplication[i] = array[i]*array[length-1-i];
+        Console.Write(",");
+    }
+
+    if (i == length-i)
+    {
+        multiplication[i] = array[i];
+        Console.Write("/");
+        break;
+    }
+}
+PrintArray(multiplication);*/
